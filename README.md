@@ -1,4 +1,4 @@
-# 🏾‍💻 Ray's Potrfolio
+# 🏾‍💻 Welcome
 
 Thank you for visiting my professional portfolio.
 This repository showcases my capabilities as a Security-Minded CITP.
