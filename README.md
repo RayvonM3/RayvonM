@@ -2,13 +2,13 @@
 
 Thank you for visiting my professional portfolio.
 This repository showcases my capabilities as a Security-Minded CITP.
-Training from Google, Cisco, and CodePath has led me to pursue a B.S. in Network Engineering & Security at Western Governers University.
+Training from Google, Cisco, and CodePath has led me to pursue a B.S. in Network Engineering & Security at Western Governors University.
 
 ---
 
 ## 🔧 Projects
 
-### 🛡️ HTost triage Control Continuum Regimen
+### HTTC Regimen 🛡️ Host triage Control Continuum Regimen
 A custom Linux-based hardening and triage routine focused on system auditing, firewall testing, and compliance alignment.
 
 ### 🌐 Network Design Draft
@@ -28,7 +28,7 @@ An evolving, Web3-powered digital sanctuary dedicated to hosting visionary conte
 
 Built as a decentralized blog and creative archive, YukosDream.dao will serve as the long-term home for my manuscript that is in progress:
  **_Breaking Bags: An Upir’s Dream_** 
-My  genre-bending manuscript that  explores history, immortality, and modern chaos through a supernatural lens.
+My genre-bending manuscript explores history, immortality, and modern chaos through a supernatural lens.
 
 ---
 
