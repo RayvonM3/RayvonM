@@ -1,0 +1,97 @@
+
+Refined Daily Linux Regimen
+Prepared for: Rayvon Mattison
+Purpose: Tier 1 Security Analyst Full-Time Skill Conditioning (WSL & Ubuntu Friendly)
+
+====================================================================
+🟩 Monday: c & Asset Visibility
+
+• ip a                             → List all network interfaces and IPs
+• ip link                          → View Permanent Hardware MAC
++ ip a | grep ether
+• Hostname -I                      → View IP Address (WiFi Connected)
++ ip a | grep inet
+• ip r                             → View routing table and gateway
+• ping -c 4 1.1.1.1                → Test outbound internet connection
+• ss -tuln                         → View listening ports/services
+• nmap -sn 192.168.1.0/24          → Scan for devices on local network
+
+✦ Purpose:
+Understand your network surface area and familiarize yourself with traffic paths and what’s “normal.”
+
+====================================================================
+🟨 Tuesday: File Structure, Permissions & Traceability
+
+• cd /etc && ls -l                 → Review system config folder and permissions
+• find /home -type f -name "*.sh" → Locate all scripts
+• stat ~/.bashrc                  → View file metadata (access/change times)
+• history | grep chmod            → Audit past permission changes
+• sudo find / -perm -4000 2>/dev/null → List SUID files (privilege escalation risk)
+
+✦ Purpose:
+Master Linux file layout, detect risky files, and understand file-level trust.
+
+====================================================================
+🟥 Wednesday: Process, Services & Vulnerability Scouting
+
+• top                             → Monitor live processes
++ q                               → Exits Monitoring | top -b -n 1 > top_snapshot_$(date +%Y_%m_%d_%H_%M).txt Logs processes
+• ps aux | grep root              → Check running root-owned processes
+• sudo systemctl list-units --type=service → View active systemd services
+• sudo lsof -i                    → List programs using network connections
+• sudo ufw status verbose         → Review firewall status in depth
+
+✦ Purpose:
+Spot anomalies in services and processes. Understand what should and shouldn’t be running.
+
+====================================================================
+🟦 Thursday: Log Auditing & Threat Recognition
+
+• sudo journalctl -p 3 -xb        → View critical errors from last boot
+• sudo less /var/log/auth.log     → Review login attempts
+• grep 'Failed password' /var/log/auth.log → Spot brute force attempts
+• last                            → View recent user login sessions
+• who -a                          → See who is currently using the system
+
+✦ Purpose:
+Recognize compromise patterns and unusual behavior via logs.
+
+====================================================================
+🟪 Friday: Hands-On Investigation & Defense
+
+• netstat -tuln > ~/Logs/open_ports_$(date +%F).txt
+• sudo tcpdump -c 100 -i eth0     → Capture packets (use only with permission)
+• tail -f /var/log/syslog         → Monitor live logs
+• sudo ufw deny out 6667/tcp      → Block a test outbound port
+• history > ~/Logs/friday_history_$(date +%F).txt
+
+✦ Purpose:
+Practice real detection and blocking techniques. Archive your actions.
+
+====================================================================
+🟫 Saturday: System Hygiene & Policy Conditioning
+
+• sudo apt update && sudo apt upgrade -y → Keep system current
+• sudo apt autoremove && sudo apt clean  → Clean residual files
+• sudo rm -rf ~/.cache/*                 → Flush user cache
+• crontab -l                             → Check scheduled jobs
+• sudo du -sh /* | sort -h              → Identify large space users
+
+✦ Purpose:
+Maintain a clean, trustworthy, efficient analyst system.
+
+====================================================================
+⬜ Sunday: Review, Reflect, and Document
+
+• history > ~/Logs/weekly_command_dump_$(date +%F).txt
+• neofetch > ~/Logs/system_identity_$(date +%F).txt
+• du -sh ~/Logs                         → Check log directory size
+• echo "Reviewed systems @ $(date)" >> ~/Logs/week_review.txt
+
+✦ Purpose:
+Turn your work into evidence. Build habits of discipline and documentation.
+
+====================================================================
+Tip:
+Color-code folders, segment logs by week, and submit summaries of your work into your Commands_Training directory weekly.
+
